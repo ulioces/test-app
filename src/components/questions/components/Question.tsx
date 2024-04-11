@@ -1,4 +1,4 @@
-import { OptionType, QuestionType } from "../../../types";
+import { OptionType, QuestionType } from "@/types";
 import "./question.css";
 
 interface Props {
@@ -11,18 +11,16 @@ interface Props {
 export const Question = (props: Props) => {
   const { question, onChange, select, markCorrect } = props;
 
-  const handleChange = (event: any) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange && onChange(question.id, parseInt(event.target.value));
   };
 
   const getClass = (option: OptionType, correct: number): string => {
-    if (markCorrect) {
-      if (option.value === correct) {
-        return "question__ansewrs-correct";
-      } else if (option.value === select) {
-        return "question__ansewrs-error";
-      }
-    }
+    if (!markCorrect) return "";
+
+    if (option.value === correct) return "question__ansewrs-correct";
+    if (option.value === select) return "question__ansewrs-error";
+
     return "";
   };
 

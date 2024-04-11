@@ -14,21 +14,26 @@ function App() {
     setShowView(VIEWS_TYPES.MAIN);
   };
 
-  return (
-    <>
-      {showView === VIEWS_TYPES.EVALUATION && (
-        <Evaluation onSend={handleSubmitEvaluation} />
-      )}
-      {showView === VIEWS_TYPES.RESULT && <Result answers={testAnswers!} />}
-      {showView === VIEWS_TYPES.MAIN && (
-        <ButtonGroup
-          disabledResult={!testAnswers}
-          onClickEvaluation={() => setShowView(VIEWS_TYPES.EVALUATION)}
-          onClickResult={() => setShowView(VIEWS_TYPES.RESULT)}
-        />
-      )}
-    </>
-  );
+  const viewComponent = () => {
+    switch (showView) {
+      case VIEWS_TYPES.EVALUATION:
+        return <Evaluation onSend={handleSubmitEvaluation} />;
+      case VIEWS_TYPES.RESULT:
+        return <Result answers={testAnswers!} />;
+      case VIEWS_TYPES.MAIN:
+        return (
+          <ButtonGroup
+            disabledResult={!testAnswers}
+            onClickEvaluation={() => setShowView(VIEWS_TYPES.EVALUATION)}
+            onClickResult={() => setShowView(VIEWS_TYPES.RESULT)}
+          />
+        );
+      default:
+        <></>;
+    }
+  };
+
+  return <main>{viewComponent()}</main>;
 }
 
 export default App;

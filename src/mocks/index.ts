@@ -1,4 +1,4 @@
-import { TestType } from "../types";
+import { TestType } from "@/types";
 
 export const test: TestType = {
   title: "Seleccione verdadero o falso",

@@ -1,4 +1,4 @@
-import { QuestionType } from "../../types";
+import { QuestionType } from "@/types";
 import { Question } from "./components/Question";
 
 interface Props {

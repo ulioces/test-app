@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
-import { texts } from "../../constants";
-import { test } from "../../mocks";
-import { QuestionType, TestType } from "../../types";
-import { Questions } from "../questions/Questions";
+import { texts } from "@/constants";
+import { test } from "@/mocks";
+import { QuestionType, TestType } from "@/types";
+import { Questions } from "@/components/questions/Questions";
 
 interface Props {
   onSend: (a: TestType) => void;
@@ -37,7 +37,7 @@ const Evaluation = (props: Props): React.ReactNode => {
   };
 
   return (
-    <>
+    <section>
       <p>{texts.TITLE_EVALUATION}</p>
       <form onSubmit={handleSubmit}>
         <Questions
@@ -49,7 +49,7 @@ const Evaluation = (props: Props): React.ReactNode => {
           {texts.BUTTON_FINISH_EVALUATION}
         </button>
       </form>
-    </>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-import { texts } from "../../constants";
+import { texts } from "@/constants";
 
 interface Props {
   onClickEvaluation: () => void;
@@ -9,7 +9,7 @@ interface Props {
 export const ButtonGroup = (props: Props) => {
   const { onClickEvaluation, onClickResult, disabledResult } = props;
   return (
-    <div>
+    <section>
       <button
         type="button"
         disabled={!disabledResult}
@@ -20,6 +20,6 @@ export const ButtonGroup = (props: Props) => {
       <button type="button" disabled={disabledResult} onClick={onClickResult}>
         {texts.BUTTON_GO_TO_RESULTS}
       </button>
-    </div>
+    </section>
   );
 };
