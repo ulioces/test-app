@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
-import { FormValue, QuestionType, TestType } from "../../types";
-import { Questions } from "../questions/Questions";
 import { texts } from "../../constants";
 import { test } from "../../mocks";
+import { QuestionType, TestType } from "../../types";
+import { Questions } from "../questions/Questions";
 
 interface Props {
   onSend: (a: TestType) => void;
@@ -11,7 +11,7 @@ interface Props {
 const Evaluation = (props: Props): React.ReactNode => {
   const { onSend } = props;
 
-  const [form, setForm] = useState((): FormValue[] =>
+  const [form, setForm] = useState((): QuestionType[] =>
     test.questions.map((question: QuestionType) => ({
       ...question,
       select: null,
@@ -19,7 +19,7 @@ const Evaluation = (props: Props): React.ReactNode => {
   );
 
   const completed = useMemo(
-    () => form.every((item: FormValue) => item.select),
+    () => form.every((item: QuestionType) => item.select),
     [form]
   );
 
@@ -29,13 +29,10 @@ const Evaluation = (props: Props): React.ReactNode => {
   };
 
   const handleChange = (id: number, value: number) => {
-    const newForm = form.map(
-      (item: FormValue) =>
-        ({
-          ...item,
-          select: id === item.id ? value : item.select,
-        } as FormValue)
-    );
+    const newForm = form.map((item: QuestionType) => ({
+      ...item,
+      select: id === item.id ? value : item.select,
+    }));
     setForm(newForm);
   };
 

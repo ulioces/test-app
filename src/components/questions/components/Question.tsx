@@ -31,15 +31,17 @@ export const Question = (props: Props) => {
       <p>{question.question}</p>
       {question.options.map((option: OptionType) => (
         <div key={option.value} className={getClass(option, question.correct)}>
-          <input
-            type="checkbox"
-            name={option.label}
-            value={option.value}
-            checked={select == option.value}
-            onChange={handleChange}
-            disabled={markCorrect}
-          />
-          <label>{option.label}</label>
+          <label>
+            <input
+              type="checkbox"
+              name={option.label}
+              value={option.value}
+              checked={select == option.value}
+              onChange={handleChange}
+              disabled={markCorrect}
+            />
+            {option.label}
+          </label>
         </div>
       ))}
     </div>

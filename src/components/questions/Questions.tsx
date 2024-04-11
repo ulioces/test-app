@@ -1,9 +1,9 @@
-import { FormValue } from "../../types";
+import { QuestionType } from "../../types";
 import { Question } from "./components/Question";
 
 interface Props {
   markCorrect?: boolean;
-  questions: FormValue[];
+  questions: QuestionType[];
   onChange?: (id: number, value: number) => void;
   description: string;
 }
@@ -14,11 +14,11 @@ export const Questions = (props: Props) => {
   return (
     <>
       <p>{description}</p>
-      {questions.map((question: FormValue) => (
+      {questions.map((question: QuestionType) => (
         <Question
           key={question.id}
           question={question}
-          select={question.select}
+          select={question.select!}
           markCorrect={markCorrect}
           onChange={onChange}
         />

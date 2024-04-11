@@ -7,10 +7,10 @@ import { TestType, View, VIEWS_TYPES } from "./types";
 
 function App() {
   const [showView, setShowView] = useState<View>(VIEWS_TYPES.MAIN);
-  const [answers, setAnswers] = useState<TestType | null>(null);
+  const [testAnswers, setTestAnswers] = useState<TestType | null>(null);
 
   const handleSubmitEvaluation = (newAnswers: TestType) => {
-    setAnswers(newAnswers);
+    setTestAnswers(newAnswers);
     setShowView(VIEWS_TYPES.MAIN);
   };
 
@@ -19,10 +19,10 @@ function App() {
       {showView === VIEWS_TYPES.EVALUATION && (
         <Evaluation onSend={handleSubmitEvaluation} />
       )}
-      {showView === VIEWS_TYPES.RESULT && <Result answers={answers!} />}
+      {showView === VIEWS_TYPES.RESULT && <Result answers={testAnswers!} />}
       {showView === VIEWS_TYPES.MAIN && (
         <ButtonGroup
-          disabledResult={!answers}
+          disabledResult={!testAnswers}
           onClickEvaluation={() => setShowView(VIEWS_TYPES.EVALUATION)}
           onClickResult={() => setShowView(VIEWS_TYPES.RESULT)}
         />

@@ -1,5 +1,5 @@
 import { texts } from "../../constants";
-import { FormValue, TestType } from "../../types";
+import { TestType } from "../../types";
 import { Questions } from "../questions/Questions";
 
 interface Props {
@@ -13,7 +13,7 @@ export const Result = (props: Props) => {
       <Questions
         description={answers.title}
         markCorrect={true}
-        questions={answers.questions as FormValue[]}
+        questions={answers.questions}
       />
     </>
   );

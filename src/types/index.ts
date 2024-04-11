@@ -7,16 +7,13 @@ export type QuestionType = {
   id: number;
   question: string;
   correct: number;
-  options: OptionType[] | FormValue[];
+  options: OptionType[];
+  select?: number | null;
 };
 
 export type TestType = {
   title: string;
   questions: QuestionType[];
-};
-
-export type FormValue = QuestionType & {
-  select: number | null;
 };
 
 export const enum VIEWS_TYPES {
