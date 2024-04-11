@@ -18,7 +18,7 @@ export const Questions = (props: Props) => {
         <Question
           key={question.id}
           question={question}
-          select={question.select!}
+          select={question.select}
           markCorrect={markCorrect}
           onChange={onChange}
         />

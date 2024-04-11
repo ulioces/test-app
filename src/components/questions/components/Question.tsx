@@ -4,7 +4,7 @@ import "./question.css";
 interface Props {
   question: QuestionType;
   onChange?: (id: number, value: number) => void;
-  select: number | null;
+  select?: number | null;
   markCorrect: boolean;
 }
 
