@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import Evaluation from "./components/evaluation/Evaluation";
-import { FormValue, TestType, View, VIEWS_TYPES } from "./types";
-import { Result } from "./components/results/Results";
 import { ButtonGroup } from "./components/buttons-group/ButtonsGroup";
+import Evaluation from "./components/evaluation/Evaluation";
+import { Result } from "./components/results/Results";
+import { TestType, View, VIEWS_TYPES } from "./types";
 
 function App() {
   const [showView, setShowView] = useState<View>(VIEWS_TYPES.MAIN);

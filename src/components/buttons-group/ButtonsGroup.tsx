@@ -1,4 +1,5 @@
 import { texts } from "../../constants";
+
 interface Props {
   onClickEvaluation: () => void;
   onClickResult: () => void;
