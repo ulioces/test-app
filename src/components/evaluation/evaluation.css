@@ -10,3 +10,9 @@
 .evaluation-section__button:disabled {
   border: 1px solid transparent;
 }
+
+@media only screen and (max-width: 600px) {
+  .evaluation-section__button {
+    width: 100%;
+  }
+}
