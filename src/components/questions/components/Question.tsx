@@ -19,8 +19,10 @@ export const Question = (props: Props) => {
     let resultClass = "question-container__option";
     if (!markCorrect) return resultClass + " input-edit";
 
-    if (option.value === correct) return resultClass + " answers-correct";
-    if (option.value === select) return resultClass + " answers-error";
+    if (option.value === select && select === correct)
+      return resultClass + " answers-correct";
+    if (option.value === select && select !== correct)
+      return resultClass + " answers-error";
 
     return resultClass;
   };
