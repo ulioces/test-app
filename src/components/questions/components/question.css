@@ -1,6 +1,32 @@
-.question__ansewrs-correct{
-    background-color: green;
+.question-container__options {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 14px;
+  flex-wrap: wrap;
 }
-.question__ansewrs-error{
-    background-color: red;
+
+.question-container__options input {
+  margin-right: 5px;
+}
+
+.question-container__option {
+  padding: 2px 10px;
+}
+
+.question-container__option.input-edit label,
+.question-container__option.input-edit input {
+  cursor: pointer;
+}
+
+.question-container__option.answers-correct {
+  background-color: #00800042;
+}
+.question-container__option.answers-error {
+  background-color: #ff000042;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
 }

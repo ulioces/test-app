@@ -1,5 +1,7 @@
 import { texts } from "@/constants";
 
+import "./buttonsGroup.css";
+
 interface Props {
   onClickEvaluation: () => void;
   onClickResult: () => void;
@@ -9,7 +11,7 @@ interface Props {
 export const ButtonGroup = (props: Props) => {
   const { onClickEvaluation, onClickResult, disabledResult } = props;
   return (
-    <section>
+    <section className="button-group-section">
       <button
         type="button"
         disabled={!disabledResult}

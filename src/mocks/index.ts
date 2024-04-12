@@ -16,11 +16,30 @@ export const test: TestType = {
           label: "option 2",
           value: 2,
         },
+        {
+          label: "option 3",
+          value: 3,
+        },
       ],
     },
     {
       id: 2,
       question: "Question 2",
+      correct: 2,
+      options: [
+        {
+          label: "option 1",
+          value: 1,
+        },
+        {
+          label: "option 2",
+          value: 2,
+        },
+      ],
+    },
+    {
+      id: 3,
+      question: "Question 3",
       correct: 2,
       options: [
         {

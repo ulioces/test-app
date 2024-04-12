@@ -1,0 +1,7 @@
+.result-section__result {
+  margin-top: 40px;
+}
+
+.result-section__result > span {
+  font-weight: 700;
+}

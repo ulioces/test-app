@@ -16,32 +16,38 @@ export const Question = (props: Props) => {
   };
 
   const getClass = (option: OptionType, correct: number): string => {
-    if (!markCorrect) return "";
+    let resultClass = "question-container__option";
+    if (!markCorrect) return resultClass + " input-edit";
 
-    if (option.value === correct) return "question__ansewrs-correct";
-    if (option.value === select) return "question__ansewrs-error";
+    if (option.value === correct) return resultClass + " answers-correct";
+    if (option.value === select) return resultClass + " answers-error";
 
-    return "";
+    return resultClass;
   };
 
   return (
-    <div>
-      <p>{question.question}</p>
-      {question.options.map((option: OptionType) => (
-        <div key={option.value} className={getClass(option, question.correct)}>
-          <label>
-            <input
-              type="checkbox"
-              name={option.label}
-              value={option.value}
-              checked={select == option.value}
-              onChange={handleChange}
-              disabled={markCorrect}
-            />
-            {option.label}
-          </label>
-        </div>
-      ))}
+    <div className="question-container">
+      <h5>{question.question}</h5>
+      <div className="question-container__options">
+        {question.options.map((option: OptionType) => (
+          <div
+            key={option.value}
+            className={getClass(option, question.correct)}
+          >
+            <label>
+              <input
+                type="checkbox"
+                name={option.label}
+                value={option.value}
+                checked={select == option.value}
+                onChange={handleChange}
+                disabled={markCorrect}
+              />
+              {option.label}
+            </label>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial;
+}
+#root {
+  width: 100%;
+  padding: 2rem;
+}
+
+:root {
+  --button-color: #e5f3ff;
+  --button-color-border: #ababab;
+}
+
+h3 {
+  color: #00bcd4;
+}
+
+h5 {
+  margin-block: 10px;
+}

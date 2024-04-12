@@ -1,0 +1,12 @@
+.evaluation-section__button {
+  margin-top: 30px;
+  background: var(--button-color);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--button-color-border);
+  cursor: pointer;
+}
+
+.evaluation-section__button:disabled {
+  border: 1px solid transparent;
+}

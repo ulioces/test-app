@@ -1,0 +1,26 @@
+.button-group-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group-section button {
+  padding: 15px;
+  background: var(--button-color);
+  border-radius: 10px;
+  border: 1px solid var(--button-color-border);
+  cursor: pointer;
+  font-size: 15px;
+  min-width: 250px;
+}
+
+.button-group-section button:hover {
+  background: #d3eaf8;
+}
+
+.button-group-section button:disabled {
+  cursor: not-allowed;
+}

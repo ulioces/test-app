@@ -3,6 +3,7 @@ import { texts } from "@/constants";
 import { test } from "@/mocks";
 import { QuestionType, TestType } from "@/types";
 import { Questions } from "@/components/questions/Questions";
+import "./evaluation.css";
 
 interface Props {
   onSend: (a: TestType) => void;
@@ -37,15 +38,19 @@ const Evaluation = (props: Props): React.ReactNode => {
   };
 
   return (
-    <section>
-      <p>{texts.TITLE_EVALUATION}</p>
+    <section className="evaluation-section">
+      <h3>{texts.TITLE_EVALUATION}</h3>
       <form onSubmit={handleSubmit}>
         <Questions
           description={test.title}
           questions={form}
           onChange={handleChange}
         />
-        <button type="submit" disabled={!completed}>
+        <button
+          className="evaluation-section__button"
+          type="submit"
+          disabled={!completed}
+        >
           {texts.BUTTON_FINISH_EVALUATION}
         </button>
       </form>

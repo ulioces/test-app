@@ -13,16 +13,19 @@ export const Questions = (props: Props) => {
 
   return (
     <>
-      <p>{description}</p>
-      {questions.map((question: QuestionType) => (
-        <Question
-          key={question.id}
-          question={question}
-          select={question.select}
-          markCorrect={markCorrect}
-          onChange={onChange}
-        />
-      ))}
+      <h4>{description}</h4>
+      <hr />
+      <div className="questions-container">
+        {questions.map((question: QuestionType) => (
+          <Question
+            key={question.id}
+            question={question}
+            select={question.select}
+            markCorrect={markCorrect}
+            onChange={onChange}
+          />
+        ))}
+      </div>
     </>
   );
 };

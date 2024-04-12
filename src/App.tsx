@@ -14,12 +14,17 @@ function App() {
     setShowView(VIEWS_TYPES.MAIN);
   };
 
+  const handleBack = () => {
+    setShowView(VIEWS_TYPES.MAIN);
+    setTestAnswers(null);
+  };
+
   const viewComponent = () => {
     switch (showView) {
       case VIEWS_TYPES.EVALUATION:
         return <Evaluation onSend={handleSubmitEvaluation} />;
       case VIEWS_TYPES.RESULT:
-        return <Result answers={testAnswers!} />;
+        return <Result answers={testAnswers!} onClickBack={handleBack} />;
       case VIEWS_TYPES.MAIN:
         return (
           <ButtonGroup
