@@ -1,5 +1,3 @@
-import { TIMEOUT } from "dns";
-
 export const texts = {
   BUTTON_GO_TO_EVALUATION: "Realizar Prueba",
   BUTTON_GO_TO_RESULTS: "Resultado de test",
