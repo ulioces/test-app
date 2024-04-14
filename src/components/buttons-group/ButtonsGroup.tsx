@@ -5,23 +5,29 @@ import "./buttonsGroup.css";
 interface Props {
   onClickEvaluation: () => void;
   onClickResult: () => void;
-  disabledResult: boolean;
+  disabledButtonResult: boolean;
 }
 
-export const ButtonGroup = (props: Props) => {
-  const { onClickEvaluation, onClickResult, disabledResult } = props;
+const ButtonGroup = (props: Props) => {
+  const { onClickEvaluation, onClickResult, disabledButtonResult } = props;
   return (
     <section className="button-group-section">
       <button
         type="button"
-        disabled={!disabledResult}
+        disabled={!disabledButtonResult}
         onClick={onClickEvaluation}
       >
         {texts.BUTTON_GO_TO_EVALUATION}
       </button>
-      <button type="button" disabled={disabledResult} onClick={onClickResult}>
+      <button
+        type="button"
+        disabled={disabledButtonResult}
+        onClick={onClickResult}
+      >
         {texts.BUTTON_GO_TO_RESULTS}
       </button>
     </section>
   );
 };
+
+export default ButtonGroup;

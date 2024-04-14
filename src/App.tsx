@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { ButtonGroup } from "@/components/buttons-group/ButtonsGroup";
+import ButtonGroup from "@/components/buttons-group/ButtonsGroup";
 import Evaluation from "@/components/evaluation/Evaluation";
 import { Result } from "@/components/results/Results";
 import { TestType, View, VIEWS_TYPES } from "@/types";
@@ -28,7 +28,7 @@ function App() {
       case VIEWS_TYPES.MAIN:
         return (
           <ButtonGroup
-            disabledResult={!testAnswers}
+            disabledButtonResult={!testAnswers}
             onClickEvaluation={() => setShowView(VIEWS_TYPES.EVALUATION)}
             onClickResult={() => setShowView(VIEWS_TYPES.RESULT)}
           />
