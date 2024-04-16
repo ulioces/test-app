@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Result = (props: Props) => {
-  const { answers } = props;
+  const { answers, onClickBack } = props;
 
   const getResult = (): string => {
     const correctCount = answers.questions.reduce(
@@ -31,6 +31,13 @@ export const Result = (props: Props) => {
       <div className="result-section__result">
         {texts.NOTA}
         <span>{getResult()}</span>
+      </div>
+      <div
+        className="result-section__retry"
+        data-testid="test-repeat"
+        onClick={onClickBack}
+      >
+        {texts.REPEAT}
       </div>
     </section>
   );

@@ -34,6 +34,7 @@ export const Question = (props: Props) => {
         {question.options.map((option: OptionType) => (
           <div
             key={option.value}
+            data-testid="test-div-question"
             className={getClass(option, question.correct)}
           >
             <label>

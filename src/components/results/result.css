@@ -5,3 +5,10 @@
 .result-section__result > span {
   font-weight: 700;
 }
+
+.result-section__retry {
+  margin-top: 40px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}

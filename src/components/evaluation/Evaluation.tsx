@@ -3,8 +3,8 @@ import { texts } from "@/constants";
 import { test } from "@/mocks";
 import { QuestionType, TestType } from "@/types";
 import { Questions } from "@/components/questions/Questions";
+import { initQuestions } from "./utils/evaluation.utils";
 import "./evaluation.css";
-
 interface Props {
   onSend: (a: TestType) => void;
 }
@@ -12,12 +12,7 @@ interface Props {
 const Evaluation = (props: Props): React.ReactNode => {
   const { onSend } = props;
 
-  const [form, setForm] = useState((): QuestionType[] =>
-    test.questions.map((question: QuestionType) => ({
-      ...question,
-      select: null,
-    }))
-  );
+  const [form, setForm] = useState<QuestionType[]>(() => initQuestions(test));
 
   const completed = useMemo(
     () => form.every((item: QuestionType) => item.select),

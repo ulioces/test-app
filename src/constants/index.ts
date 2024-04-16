@@ -5,4 +5,5 @@ export const texts = {
   TITLE_EVALUATION: "Evaluación",
   TITLE_RESULTS: "Resultado",
   NOTA: "NOTA: ",
+  REPEAT: "REPETIR",
 };

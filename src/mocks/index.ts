@@ -5,49 +5,47 @@ export const test: TestType = {
   questions: [
     {
       id: 1,
-      question: "Question 1",
+      question:
+        "Más del 50 % de la mortalidad infantil se debe al problema del hambre mundial.",
       correct: 1,
       options: [
         {
-          label: "option 1",
+          label: "Verdadero",
           value: 1,
         },
         {
-          label: "option 2",
+          label: "Falso",
           value: 2,
-        },
-        {
-          label: "option 3",
-          value: 3,
         },
       ],
     },
     {
       id: 2,
-      question: "Question 2",
+      question: "El organo mas pesado del cuerpo humano es el cerebro.",
       correct: 2,
       options: [
         {
-          label: "option 1",
+          label: "Verdadero",
           value: 1,
         },
         {
-          label: "option 2",
+          label: "Falso",
           value: 2,
         },
       ],
     },
     {
       id: 3,
-      question: "Question 3",
-      correct: 2,
+      question:
+        "La Universidad de Cambridge se fundó antes que el Machu Picchu.",
+      correct: 1,
       options: [
         {
-          label: "option 1",
+          label: "Verdadero",
           value: 1,
         },
         {
-          label: "option 2",
+          label: "Falso",
           value: 2,
         },
       ],
