@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import ButtonGroup from "@/components/buttons-group/ButtonsGroup";
-import Evaluation from "@/components/evaluation/Evaluation";
+import { ButtonGroup } from "@/components/buttons-group/ButtonsGroup";
+import { Evaluation } from "@/components/evaluation/Evaluation";
 import { Result } from "@/components/results/Results";
 import { TestType, View, VIEWS_TYPES } from "@/types";
 

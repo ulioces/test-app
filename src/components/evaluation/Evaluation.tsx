@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { texts } from "@/constants";
 import { test } from "@/mocks";
 import { QuestionType, TestType } from "@/types";
@@ -9,7 +9,7 @@ interface Props {
   onSend: (a: TestType) => void;
 }
 
-const Evaluation = (props: Props): React.ReactNode => {
+export const Evaluation = (props: Props) => {
   const { onSend } = props;
 
   const [form, setForm] = useState<QuestionType[]>(() => initQuestions(test));
@@ -52,5 +52,3 @@ const Evaluation = (props: Props): React.ReactNode => {
     </section>
   );
 };
-
-export default Evaluation;

@@ -8,7 +8,7 @@ interface Props {
   disabledButtonResult: boolean;
 }
 
-const ButtonGroup = (props: Props) => {
+export const ButtonGroup = (props: Props) => {
   const { onClickEvaluation, onClickResult, disabledButtonResult } = props;
   return (
     <section className="button-group-section">
@@ -29,5 +29,3 @@ const ButtonGroup = (props: Props) => {
     </section>
   );
 };
-
-export default ButtonGroup;

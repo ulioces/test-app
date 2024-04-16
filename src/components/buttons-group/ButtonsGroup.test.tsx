@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import ButtonGroup from "./ButtonsGroup";
+import { ButtonGroup } from "./ButtonsGroup";
 
 jest.mock("@/constants");
 jest.mock("./buttonsGroup.css");

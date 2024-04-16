@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Evaluation from "./Evaluation";
+import { Evaluation } from "./Evaluation";
 import {
   mockQuestionsCompleted,
   mockQuestionsIncompleted,
